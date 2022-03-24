@@ -3,9 +3,9 @@ import { Navbar } from '../components/index'
 
 const Home = () => {
   return (
-    <>
-    <Navbar />
-    </>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 
