@@ -1,10 +1,12 @@
 import React from 'react'
-import { Navbar } from '../components/index'
+import { Navbar, Announcement, Slider } from '../components/index'
 
 const Home = () => {
   return (
     <div>
+      <Announcement />
       <Navbar />
+      <Slider />
     </div>
   )
 }
