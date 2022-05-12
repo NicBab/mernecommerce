@@ -1,6 +1,10 @@
-import React from 'react'
-import styled from "styled-components"
-import { ShoppingCartOutlined, SearchOutlined, FavoriteBorderOutlined } from "@material-ui/icons";
+import React from "react";
+import styled from "styled-components";
+import {
+  ShoppingCartOutlined,
+  SearchOutlined,
+  FavoriteBorderOutlined,
+} from "@material-ui/icons";
 
 const Info = styled.div`
   opacity: 0;
@@ -9,7 +13,7 @@ const Info = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 3;
   display: flex;
   align-items: center;
@@ -38,7 +42,7 @@ const Circle = styled.div`
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: #FAEBD7;
+  background-color: #faebd7;
   position: absolute;
 `;
 
@@ -51,37 +55,37 @@ const Icon = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
   transition: all 0.2s ease;
-  
-  &:hover{
+
+  &:hover {
     background-color: #e9f5f5;
     transform: scale(1.1);
   }
 `;
 
-const Product = ({item}) => {
+const Product = ({ item }) => {
   return (
     <Container>
-      <Circle/>
+      <Circle />
       <Image src={item.img} />
       <Info>
         <Icon>
-          <ShoppingCartOutlined/>
+          <ShoppingCartOutlined />
         </Icon>
         <Icon>
-          <SearchOutlined/>
+          <SearchOutlined />
         </Icon>
         <Icon>
-          <FavoriteBorderOutlined/>
+          <FavoriteBorderOutlined />
         </Icon>
       </Info>
     </Container>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
