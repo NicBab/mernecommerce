@@ -71,7 +71,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Mern EComm</Logo>
+          <Logo>MERN eCommerce</Logo>
         </Center>
         <Right>
           <MenuItem>Register</MenuItem>

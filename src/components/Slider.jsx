@@ -9,7 +9,6 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
- 
 `;
 
 const Arrow = styled.div`
@@ -34,7 +33,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transition: all 1.5s ease;
+  transition: all 1s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
@@ -75,6 +74,7 @@ const Desc = styled.p`
 const Button = styled.button`
   padding: 10px;
   font-size: 20px;
+  border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
 `;
@@ -103,7 +103,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
+              <Button>SHOP NOW</Button>
             </InfoContainer>
           </Slide>
         ))}

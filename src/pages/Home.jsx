@@ -1,5 +1,11 @@
-import React from 'react'
-import { Navbar, Announcement, Slider } from '../components/index'
+import React from "react";
+import {
+  Navbar,
+  Announcement,
+  Slider,
+  Categories,
+  Products,
+} from "../components/index";
 
 const Home = () => {
   return (
@@ -7,8 +13,10 @@ const Home = () => {
       <Announcement />
       <Navbar />
       <Slider />
+      <Categories />
+      <Products />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
