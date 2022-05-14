@@ -39,6 +39,7 @@ const SocialIcon = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 20px;
+  cursor: pointer;
 `;
 
 const Center = styled.div`
@@ -62,6 +63,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  cursor: pointer;
 `;
 
 const Right = styled.div`
@@ -118,7 +120,7 @@ const Footer = () => {
         <Title>Contact</Title>
         <ContactItem>
           <MailOutline style={{ marginRight: "10px" }} />
-          nickpbab@gmail.com
+          stellarinnovationco@gmail.com
         </ContactItem>
         <ContactItem>
           <Phone style={{ marginRight: "10px" }} />
