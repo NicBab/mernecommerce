@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from "styled-components"
-import { popularProducts } from '../data'
-import { Product } from './index'
+import React from "react";
+import styled from "styled-components";
+import { popularProducts } from "../data";
+import { Product } from "./index";
 
 const Container = styled.div`
   padding: 20px;
@@ -17,7 +17,7 @@ const Products = () => {
         <Product item={item} key={item.id} />
       ))}
     </Container>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

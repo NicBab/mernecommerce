@@ -17,7 +17,7 @@ width: 100vw;
 function App() {
   return (
     <Container>
-      <Cart />
+      <ProductList />
     </Container>
   );
 }

@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Add, Remove } from "@material-ui/icons";
 import { Navbar, Announcement, Newsletter, Footer } from "../components/index";
-import { mobile } from '../responsive'
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   display: flex;
   padding: 50px;
-  ${mobile({ padding: "10px", flexDirection: "column"})}
+  ${mobile({ padding: "10px", flexDirection: "column" })}
 `;
 
 const ImgContainer = styled.div`
@@ -26,7 +26,7 @@ const Image = styled.img`
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0px 50px;
-  ${mobile({ padding: "10px"})}
+  ${mobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
@@ -47,7 +47,7 @@ const FilterContainer = styled.div`
   justify-content: space-between;
   margin: 30px 0px;
   width: 50%;
-  ${mobile({ width: " 100%"})}
+  ${mobile({ width: " 100%" })}
 `;
 
 const Filter = styled.div`
@@ -81,7 +81,7 @@ const AddContainer = styled.div`
   align-items: center;
   width: 50%;
   justify-content: space-between;
-  ${mobile({ width: "100%"})}
+  ${mobile({ width: "100%" })}
 `;
 
 const AmountContainer = styled.div`

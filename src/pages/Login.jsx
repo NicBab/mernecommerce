@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { mobile } from '../responsive'
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   background-color: white;
   max-width: 400px;
   border-radius: 5px;
-  ${mobile({ width: "75%"})}
+  ${mobile({ width: "75%" })}
 `;
 
 const Form = styled.form`
@@ -39,32 +39,32 @@ const Title = styled.h1`
 `;
 
 const Input = styled.input`
-    flex: 1;
-    min-width: 75%;
-    margin: 10px 10px 0px 0px;
-    padding: 10px;
+  flex: 1;
+  min-width: 75%;
+  margin: 10px 10px 0px 0px;
+  padding: 10px;
 `;
 
 const Button = styled.button`
-    width: 40%;
-    border: none;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
+  width: 40%;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
 
-    &:hover {
-        background-color: teal;
-    }
+  &:hover {
+    background-color: teal;
+  }
 `;
 
 const Link = styled.a`
-    margin: 5px 0px;
-    font-size: 14px;
-    text-decoration: underline;
-    cursor: pointer;
+  margin: 5px 0px;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
 `;
 
 const Login = () => {
@@ -72,7 +72,7 @@ const Login = () => {
     <Container>
       <Wrapper>
         <Form>
-        <Title>Sign In</Title>
+          <Title>Sign In</Title>
           <Input placeholder="username" />
           <Input placeholder="password" />
           <Button>Login</Button>

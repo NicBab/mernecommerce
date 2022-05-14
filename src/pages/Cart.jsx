@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Add, Remove } from "@material-ui/icons";
 import { Navbar, Announcement, Footer } from "../components/index";
-import { mobile } from '../responsive'
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
-  ${mobile({ padding: "10px"})}
+  ${mobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
@@ -34,7 +34,7 @@ const TopButton = styled.button`
 `;
 
 const TopTexts = styled.div`
-    ${mobile({ display: "none"})}
+  ${mobile({ display: "none" })}
 `;
 
 const TopText = styled.span`
@@ -46,7 +46,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
-  ${mobile({ flexDirection: "column"})}
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Info = styled.div`
@@ -56,7 +56,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
-  ${mobile({ flexDirection: "column"})}
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -104,14 +104,14 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
   font-size: 24px;
   margin: 5px;
-  ${mobile({ margin: "5px 15px"})}
+  ${mobile({ margin: "5px 15px" })}
 `;
 
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 300;
   margin-bottom: 20px;
-  ${mobile({ margin: "20px"})}
+  ${mobile({ margin: "20px" })}
 `;
 
 const Hr = styled.hr`
@@ -145,13 +145,13 @@ const SummaryItemText = styled.span``;
 const SummaryItemPrice = styled.span``;
 
 const SummaryButton = styled.button`
-    width: 100%;
-    padding: 10px;
-    background-color: teal;
-    color: white;
-    font-weight: 600;
-    border-radius: 10px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: teal;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
 `;
 
 const Cart = () => {
