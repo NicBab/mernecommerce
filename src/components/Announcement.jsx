@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive'
 
 const Container = styled.div`
 height: 30px;
@@ -9,7 +10,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 font-size: 14px;
-font-weight: bold;`
+font-weight: bold;
+${mobile({ marginTop: "10px"})}
+`;
 
 const Announcement = () => {
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 import {
   Facebook,
   Instagram,
@@ -11,6 +12,7 @@ import {
 
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -18,6 +20,7 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  ${mobile({ alignItems: "center", justifyContent: "center" })}
 `;
 
 const Logo = styled.h1``;
@@ -45,7 +48,9 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `;
+
 const Title = styled.h3`
     margin-bottom: 30px;
     display: flex;
@@ -67,8 +72,13 @@ const ListItem = styled.li`
 `;
 
 const Right = styled.div`
+  display: flex;
+  flex-direction: column;
   flex: 1;
   padding: 20px;
+  ${mobile({
+    backgroundColor: "#eee",
+  })}
 `;
 
 const ContactItem = styled.div`
@@ -85,7 +95,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>Nic Babineaux</Logo>
+        <Logo>Stellar Innovation</Logo>
         <Description>This is my eCommerce portfolio project</Description>
         <SocialContainer>
           <SocialIcon color="3b5999">
