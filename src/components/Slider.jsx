@@ -26,8 +26,11 @@ const Arrow = styled.div`
   right: ${(props) => props.direction === "right" && "10px"};
   margin: auto;
   cursor: pointer;
-  opacity: 0.5;
   z-index: 2;
+
+  &:hover {
+    background-color: teal;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -75,8 +78,12 @@ const Button = styled.button`
   padding: 10px;
   font-size: 20px;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: ;
   cursor: pointer;
+
+  &:hover {
+    background-color: teal;
+  }
 `;
 
 const Slider = () => {
