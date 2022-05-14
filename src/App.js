@@ -1,10 +1,17 @@
-import './App.css'
-import { Home, ProductList, Product, Register, Login } from './pages/index'
+import "./App.css";
+import {
+  Home,
+  ProductList,
+  Product,
+  Register,
+  Login,
+  Cart,
+} from "./pages/index";
 
 function App() {
   return (
-    <> 
-    <Login />
+    <>
+      <Cart />
     </>
   );
 }
