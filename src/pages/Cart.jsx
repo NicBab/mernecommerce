@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
 import { Add, Remove } from "@material-ui/icons";
 import { Navbar, Announcement, Footer } from "../components/index";
 import { mobile } from "../responsive";
+import StripeCheckout from "react-stripe-checkout";
+
+const KEY = "pk_test_51L0Sf4JXC8zrC0xK8KB4pfpumAGPlY6GPooBO4PqCTl5vBYaknqMTOxZwnl3ka2RSAeZjvQ1T1mfueBUcl2Cc80N00iZ9atqsh"
+
+const axios = require('axios').default;
+
 
 const Container = styled.div``;
 
@@ -144,7 +151,7 @@ const SummaryItemText = styled.span``;
 
 const SummaryItemPrice = styled.span``;
 
-const SummaryButton = styled.button`
+const CheckoutButton = styled.button`
   width: 100%;
   padding: 10px;
   background-color: teal;
@@ -155,6 +162,31 @@ const SummaryButton = styled.button`
 `;
 
 const Cart = () => {
+  
+  const [stripeToken, setStripeToken] = useState(null);
+  const onToken = (token) => {
+    console.log(token, "token**");
+  };
+
+  useEffect(() => {
+    const makeRequest = async () => {
+      try {
+        const res = await axios.post(
+          "http://localhost:3000/api/checkout/payment",
+          {
+            tokenId: stripeToken.id,
+            amount: 2000,
+          }
+        );
+        console.log(res.data)
+        
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    stripeToken && makeRequest()
+  }, [stripeToken]);
+
   return (
     <Container>
       <Navbar />
@@ -242,7 +274,21 @@ const Cart = () => {
               <SummaryItemText></SummaryItemText>
               <SummaryItemPrice>$80</SummaryItemPrice>
             </SummaryItem>
-            <SummaryButton>Checkout Now</SummaryButton>
+
+       
+                     <StripeCheckout
+                     name="My Shop"
+                     image=""
+                     billingAddress
+                     shippingAddress
+                     description="Your total is $20" //{`Your total is $${cart.total}`}
+                     amount={2000} //cart.total * 100
+                     token={onToken}
+                     stripeKey={KEY}
+                   >
+                     <CheckoutButton>CHECKOUT NOW</CheckoutButton>
+                   </StripeCheckout>
+          
           </Summary>
         </Bottom>
       </Wrapper>
